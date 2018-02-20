@@ -1,0 +1,30 @@
+{
+  "name": "support-tool-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon lib/index.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "fast-csv": "^2.4.1",
+    "jade": "~1.11.0",
+    "mongoose": "^5.0.4",
+    "morgan": "~1.9.0",
+    "pixl-xml": "^1.0.13",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.14.12"
+  }
+}

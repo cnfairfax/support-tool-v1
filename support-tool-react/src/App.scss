@@ -1,0 +1,268 @@
+$cranberry: #E31A51;
+$midnight: #153258;
+$primaryGreen: #2CAC60;
+$supportGreen: #207142;
+$supportRed: #B11850;
+$supportYellow: #CC85106;
+$supportYellowFaded: #FEEED0;
+$dark: #283541;
+$mid: #92A1B5;
+$white: #F0F5F8;
+
+body {
+    margin: 0;
+    color: $dark;
+}
+
+body, body * {
+    display: flex;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    flex-direction: column;
+}
+
+.container {
+    flex-direction: row;
+    
+    .header {
+        min-width: 25%;
+        background-color: $dark;
+        color: $white;
+        
+        img {
+            max-width: 66%;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 0 5px;
+        }
+        
+        .nav {
+            padding: 0;
+            
+            li {
+                padding: 5px 10px;
+                
+                &:hover {
+                    background-color: $midnight;
+                }
+                
+                a {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+body .page {
+    min-height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $white;
+    
+    .module-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .buttons {
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+            
+        button {
+            max-width: 300px;
+            margin-right: 20px;
+            background-color: $cranberry;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: .95em;
+            color: $white;
+            transition: all .15s ease;
+                
+            &:hover {
+                background-color: $primaryGreen;
+                cursor: pointer;
+            }
+                
+            &:active, &:focus {
+                background-color: $supportGreen;
+            }
+        }
+    }
+    
+    .solo-form-module {
+        width: 450px;
+        padding: 15px;
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .submit-box {
+            cursor: pointer;
+        }
+    }
+    
+    .email-report {
+        width: 90%;
+    }
+    
+    .table-wrapper {
+        width: 100%;
+        
+        .table-row {
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 5px;
+            
+            .header-cell {
+                font-size: 1.2em;
+            }
+            
+            .cell {
+                font-size: 1.1em;
+            }
+        
+            .header-cell, .cell {
+                line-height: 1.15em;
+                padding: 0 5px;
+                &.email {
+                    width: 40%;
+                }
+                
+                &.account {
+                    width: 25%;
+                }
+                
+                &.created-on {
+                    width: 15%;
+                    text-align: center;
+                }
+                
+                &.blocked-on {
+                    width: 40%;
+                    text-align: center;
+                }
+                
+                &.delete, &.download {
+                    width: 20%;
+                    text-align: right;
+                    
+                    .button {
+                        background-color: $midnight;
+                        color: #fff;
+                        padding: 5px;
+                        border-radius: 3px;
+                        text-align: center;
+                        transition: all .15s ease;
+                        
+                        &:hover {
+                            background-color: $supportRed;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+                &.download {
+                    text-align: center;
+                }
+            }
+        }
+        
+        .table-body .table-row {
+            transition: all .5s;
+            
+            &:hover {
+                background-color: $supportYellowFaded;   
+            }
+        }
+    }
+    
+    
+    
+    form .field-group {
+        margin-bottom: 20px;
+        
+        input[type="text"] {
+            text-align: center;
+            border: none;
+            font-size: 1.25em;
+            line-height: 1.2em;
+            border-bottom: 2px solid #444;
+            background-color: $white;
+            
+            &:focus {
+                outline: none;
+                background-color: $mid;
+            }
+        }
+        
+        select, textarea, input[type="text"]{
+            margin-top: 5px;
+            transition: all .25s ease;
+        }
+        
+        select, textarea {
+            font-size: .95em;
+            line-height: 1.05em;
+            outline-color: $midnight;
+        }
+        
+        textarea {
+            min-height: 200px;
+            padding: 5px;
+        }
+    }
+    
+    form .submit-box {
+        width: 100%;
+        
+        input[type='submit'] {
+            appearance: none;
+            padding: 10px;
+            width: 100%;
+            color: $white;
+            border: 1px solid $dark;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            background: $midnight;
+            transition: all .15s ease;
+            outline: 0;
+            
+            &:hover, &:focus {
+                background: $supportGreen;
+                color: #fff;
+                cursor: pointer;
+            }
+            
+            &:active {
+                background: $white;
+            }
+        }
+    }
+}
+
+.warning {
+    display: block;
+    background-color: $cranberry;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 10px;
+    max-width: 100%;
+}

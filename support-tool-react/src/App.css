@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  color: #283541; }
+
+body, body * {
+  display: flex;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column; }
+
+.container {
+  flex-direction: row; }
+  .container .header {
+    min-width: 25%;
+    background-color: #283541;
+    color: #F0F5F8; }
+    .container .header img {
+      max-width: 66%;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 0;
+      text-align: center; }
+    .container .header h1 {
+      text-align: center;
+      padding: 0 5px; }
+    .container .header .nav {
+      padding: 0; }
+      .container .header .nav li {
+        padding: 5px 10px; }
+        .container .header .nav li:hover {
+          background-color: #153258; }
+        .container .header .nav li a {
+          color: #F0F5F8;
+          text-decoration: none; }
+
+body .page {
+  min-height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #F0F5F8; }
+  body .page .module-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  body .page .buttons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center; }
+    body .page .buttons button {
+      max-width: 300px;
+      margin-right: 20px;
+      background-color: #E31A51;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      font-size: .95em;
+      color: #F0F5F8;
+      transition: all .15s ease; }
+      body .page .buttons button:hover {
+        background-color: #2CAC60;
+        cursor: pointer; }
+      body .page .buttons button:active, body .page .buttons button:focus {
+        background-color: #207142; }
+  body .page .solo-form-module {
+    width: 450px;
+    padding: 15px; }
+    body .page .solo-form-module h1 {
+      text-align: center; }
+    body .page .solo-form-module .submit-box {
+      cursor: pointer; }
+  body .page .email-report {
+    width: 90%; }
+  body .page .table-wrapper {
+    width: 100%; }
+    body .page .table-wrapper .table-row {
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 5px; }
+      body .page .table-wrapper .table-row .header-cell {
+        font-size: 1.2em; }
+      body .page .table-wrapper .table-row .cell {
+        font-size: 1.1em; }
+      body .page .table-wrapper .table-row .header-cell, body .page .table-wrapper .table-row .cell {
+        line-height: 1.15em;
+        padding: 0 5px; }
+        body .page .table-wrapper .table-row .header-cell.email, body .page .table-wrapper .table-row .cell.email {
+          width: 40%; }
+        body .page .table-wrapper .table-row .header-cell.account, body .page .table-wrapper .table-row .cell.account {
+          width: 25%; }
+        body .page .table-wrapper .table-row .header-cell.created-on, body .page .table-wrapper .table-row .cell.created-on {
+          width: 15%;
+          text-align: center; }
+        body .page .table-wrapper .table-row .header-cell.blocked-on, body .page .table-wrapper .table-row .cell.blocked-on {
+          width: 40%;
+          text-align: center; }
+        body .page .table-wrapper .table-row .header-cell.delete, body .page .table-wrapper .table-row .header-cell.download, body .page .table-wrapper .table-row .cell.delete, body .page .table-wrapper .table-row .cell.download {
+          width: 20%;
+          text-align: right; }
+          body .page .table-wrapper .table-row .header-cell.delete .button, body .page .table-wrapper .table-row .header-cell.download .button, body .page .table-wrapper .table-row .cell.delete .button, body .page .table-wrapper .table-row .cell.download .button {
+            background-color: #153258;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            text-align: center;
+            transition: all .15s ease; }
+            body .page .table-wrapper .table-row .header-cell.delete .button:hover, body .page .table-wrapper .table-row .header-cell.download .button:hover, body .page .table-wrapper .table-row .cell.delete .button:hover, body .page .table-wrapper .table-row .cell.download .button:hover {
+              background-color: #B11850;
+              cursor: pointer; }
+        body .page .table-wrapper .table-row .header-cell.download, body .page .table-wrapper .table-row .cell.download {
+          text-align: center; }
+    body .page .table-wrapper .table-body .table-row {
+      transition: all .5s; }
+      body .page .table-wrapper .table-body .table-row:hover {
+        background-color: #FEEED0; }
+  body .page form .field-group {
+    margin-bottom: 20px; }
+    body .page form .field-group input[type="text"] {
+      text-align: center;
+      border: none;
+      font-size: 1.25em;
+      line-height: 1.2em;
+      border-bottom: 2px solid #444;
+      background-color: #F0F5F8; }
+      body .page form .field-group input[type="text"]:focus {
+        outline: none;
+        background-color: #92A1B5; }
+    body .page form .field-group select, body .page form .field-group textarea, body .page form .field-group input[type="text"] {
+      margin-top: 5px;
+      transition: all .25s ease; }
+    body .page form .field-group select, body .page form .field-group textarea {
+      font-size: .95em;
+      line-height: 1.05em;
+      outline-color: #153258; }
+    body .page form .field-group textarea {
+      min-height: 200px;
+      padding: 5px; }
+  body .page form .submit-box {
+    width: 100%; }
+    body .page form .submit-box input[type='submit'] {
+      appearance: none;
+      padding: 10px;
+      width: 100%;
+      color: #F0F5F8;
+      border: 1px solid #283541;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      background: #153258;
+      transition: all .15s ease;
+      outline: 0; }
+      body .page form .submit-box input[type='submit']:hover, body .page form .submit-box input[type='submit']:focus {
+        background: #207142;
+        color: #fff;
+        cursor: pointer; }
+      body .page form .submit-box input[type='submit']:active {
+        background: #F0F5F8; }
+
+.warning {
+  display: block;
+  background-color: #E31A51;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 10px;
+  max-width: 100%; }
